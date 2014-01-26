@@ -1,6 +1,5 @@
 require 'test_helper'
 require File.expand_path(File.dirname(__FILE__) + '/../lib/prime_generator')
-puts $LOAD_PATH
 
 class PrimeGeneratorTest < Minitest::Spec
   # sanity

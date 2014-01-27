@@ -1,7 +1,9 @@
+require_relative 'prime_generator'
+
 class MultiplicationTable
   attr_reader :prime_numbers
   def self.generate(num=10)
-    initialize(num).generate
+    new(num).generate
   end
 
   def initialize(num)
@@ -10,12 +12,10 @@ class MultiplicationTable
   end
 
   def generate
-    [].tap do |column|
-      column.push prime_numbers.unshift(nil)
-      prime_numbers.each do |prime|
-        prime
+    prime_numbers.inject([]) do |row_acc, row_prime|
+      row_acc << prime_numbers.inject([]) do |col_acc, col_prime|
+        col_acc << col_prime * row_prime
       end
     end
-    prime_numbers.
   end
 end

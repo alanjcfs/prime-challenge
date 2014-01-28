@@ -1,3 +1,4 @@
+#!/usr/bin/env ruby
 require_relative 'lib/multiplication_table'
 
 NUM = ARGV.first || 10

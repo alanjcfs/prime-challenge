@@ -1,6 +1,6 @@
 require_relative 'lib/multiplication_table'
 
-NUM = 10
+NUM = ARGV.first || 10
 
 multiplication_table = MultiplicationTable.new(NUM.to_i).with_formatting
 

@@ -18,4 +18,12 @@ class MultiplicationTable
       end
     end
   end
+
+  def with_formatting
+    table = self.generate
+    table.each_with_index do |row, index|
+      row.unshift(@prime_numbers[index])
+    end
+    table.unshift([""] + @prime_numbers)
+  end
 end

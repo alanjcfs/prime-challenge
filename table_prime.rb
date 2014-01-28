@@ -2,14 +2,8 @@ require_relative 'lib/multiplication_table'
 
 NUM = 10
 
-multiplication_table = MultiplicationTable.new(NUM)
-table = multiplication_table.generate
-primes = multiplication_table.prime_numbers
+multiplication_table = MultiplicationTable.new(NUM.to_i).with_formatting
 
-primes.unshift("")
-puts primes.join("	| ")
-
-table.each_with_index do |row, index|
-  row.unshift(primes[index+1])
+multiplication_table.each do |row|
   puts row.join("	| ")
 end

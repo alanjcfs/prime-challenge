@@ -11,6 +11,9 @@ class MultiplicationTable
     self
   end
 
+  #
+  # This is a O(N^2) algorithm.
+  #
   def generate
     prime_numbers.inject([]) do |row_acc, row_prime|
       row_acc << prime_numbers.inject([]) do |col_acc, col_prime|

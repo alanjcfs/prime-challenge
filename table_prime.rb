@@ -7,9 +7,9 @@ table = multiplication_table.generate
 primes = multiplication_table.prime_numbers
 
 primes.unshift("")
-puts primes.join("	|	")
+puts primes.join("	| ")
 
 table.each_with_index do |row, index|
   row.unshift(primes[index+1])
-  puts row.join("	|	")
+  puts row.join("	| ")
 end

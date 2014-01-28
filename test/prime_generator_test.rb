@@ -16,6 +16,10 @@ class PrimeGeneratorTest < Minitest::Spec
     PrimeGenerator.take(5).must_be :==, [2, 3, 5, 7, 11]
   end
 
+  it "returns an array of 15 primes for take(15)" do
+    PrimeGenerator.take(15).must_be :==, [2, 3, 5, 7, 11, 13, 17, 19, 23, 29, 31, 37, 41, 43, 47]
+  end
+
   describe "composite number check" do
     before do
       @prime_generator = PrimeGenerator.new(5)

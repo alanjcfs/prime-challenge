@@ -2,11 +2,8 @@ require_relative 'prime_generator'
 
 class MultiplicationTable
   attr_reader :prime_numbers
-  def self.generate(num=10)
-    new(num).generate
-  end
-
-  def initialize(num)
+  def initialize(num=10)
+    return puts "Number must be at least 1" if num < 1
     @prime_numbers = PrimeGenerator.take(num)
     self
   end
